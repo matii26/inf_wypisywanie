@@ -24,5 +24,23 @@ with open("slowa.txt", "r") as dane:
 
 plik_wyniki.close()
 plik_wyniki2.close()
+
+print("Podaj słowo")
+
+slowo = input("")
+szukane = "wakacje"
+
+doskreslenia = 0
+#k szukane
+k = 0
+for litera in slowo:
+    if litera != szukane[k]:
+        doskreslenia +=1
+    else:
+        k = k + 1
+    if k == len(szukane):
+         k=0
+        
+print(doskreslenia)
 #https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Arkusze_egzaminacyjne/2023/Informatyka/EINP-R2-100-2305.pdf
 #zadanie4.3
